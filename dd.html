@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Department</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+      
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f4f7fc;
+        color: #333;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .container {
+        max-width: 1200px;
+        margin: 30px auto;
+        padding: 0 15px;
+    }
+    
+    h1 {
+        font-size: 36px;
+        font-weight: bold;
+        text-align: center;
+        color: #333;
+    }
+    
+    h3 {
+        font-size: 28px;
+        font-weight: 600;
+        color: #444;
+        margin-bottom: 20px;
+    }
+    /* Forum Post Styling */
+.forum-post {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.forum-post:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+/* Forum Post Title */
+.forum-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0066cc;
+    margin-bottom: 10px;
+}
+
+/* Forum Post Content */
+.forum-content {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Reply Button Styling */
+.forum-reply-btn {
+    color: #0066cc;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.forum-reply-btn:hover {
+    color: #004d99;
+}
+
+.forum-reply-btn:focus {
+    outline: none;
+}
+
+/* Forum Post Form Styling */
+.forum-form {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Textarea Styling */
+.forum-form textarea {
+    width: 100%;
+    height: 120px;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.forum-form textarea:focus {
+    border-color: #0066cc;
+    box-shadow: 0 0 5px rgba(0, 102, 204, 0.3);
+    outline: none;
+}
+
+/* Post Button Styling */
+.forum-form button {
+    width: 100%;
+    background-color: #0066cc;
+    color: white;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.forum-form button:hover {
+    background-color: #004d99;
+}
+
+/* Subtle Animation for Posts */
+.forum-post {
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Forum Form Heading */
+.forum-form h4 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #444;
+}
+
+/* Styling for Replies */
+.forum-post .forum-post {
+    margin-left: 30px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.forum-post .forum-post .forum-reply-btn {
+    font-size: 12px;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    .forum-form textarea {
+        height: 100px;
+    }
+
+    .forum-form button {
+        font-size: 16px;
+    }
+
+    .forum-title {
+        font-size: 18px;
+    }
+
+    .forum-content {
+        font-size: 14px;
+    }
+
+    .forum-reply-btn {
+        font-size: 12px;
+    }
+}
+
+</style>
+
+</head>
+<body>
+    <header class="header">
+        <div class="container py-2">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                    <!-- Logo -->
+                    <img class="logo animated fadeIn" src="https://cietcbe.edu.in/images/logo.png" alt="CIET Logo" />
+                    
+                    <!-- Department Title and Subtitle in center -->
+                    <div class="text-center mx-auto animated fadeInUp">
+                        <!-- Department Title -->
+                        <h1 class="title mb-1 text-dark">Information Technology</h1>
+                        <p class="subtitle mb-0 text-primary">"Accredited With 'A' Grade By NAAC" (Autonomous)</p>
+                    </div>
+                    
+                </div>
+            </nav>
+        </div>
+    </header>
+     <!-- Navbar -->
+
+ <!-- Navbar -->
+ <nav class="navbar navbar-expand-lg navbar-dark zebra">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">IT Department</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html" id="home-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html" id="login-link">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html" id="about-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html" id="contact-link">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="student_library.html" id="resources-link">Student Resources</a> <!-- Changed ID -->
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Menu
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item lion" href="http://123.255.250.114/CMSapp/fees/studentfees/feesonlinepayment/">Online Payment</a></li>
+              <li><a class="dropdown-item tiger" href="http://123.255.250.114/CMSAPP/dist/account/signin?returnurl=%2Fcmsapp%2F">CMS Login</a></li>
+              <li><a class="dropdown-item elephant" href="dd.html">Department Forum</a></li>
+              <li><a class="dropdown-item giraffe" href="http://123.255.250.114/CMSApp/coe/result/viewexamresults">Result</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1 class="text-center mt-5">Department Forum</h1>
+
+    <!-- Course-Related Discussions Section -->
+    <div class="mt-5">
+        <h3>Course-Related Discussions</h3>
+        <div id="course-forum">
+            <!-- Posts will be dynamically added here -->
+        </div>
+        <div class="forum-form">
+            <h4>Create a New Post</h4>
+            <textarea id="course-post-content" placeholder="Share your thoughts on the course..."></textarea>
+            <button onclick="postToCourseForum()">Post</button>
+        </div>
+    </div>
+
+    <!-- General Department Forum Section -->
+    <div class="mt-5">
+        <h3>General Department Forum</h3>
+        <div id="general-forum">
+            <!-- Posts will be dynamically added here -->
+        </div>
+        <div class="forum-form">
+            <h4>Create a New Post</h4>
+            <textarea id="general-post-content" placeholder="Talk about departmental activities..."></textarea>
+            <button onclick="postToGeneralForum()">Post</button>
+        </div>
+    </div>
+
+    <!-- Q&A Section -->
+    <div class="mt-5">
+        <h3>Q&A Section</h3>
+        <div id="qa-forum">
+            <!-- Posts will be dynamically added here -->
+        </div>
+        <div class="forum-form">
+            <h4>Ask a Question</h4>
+            <textarea id="qa-question" placeholder="Ask a question about your academic career..."></textarea>
+            <button onclick="askQuestion()">Ask</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Load previous posts from localStorage (for all users in this session)
+    document.addEventListener('DOMContentLoaded', function() {
+        loadPosts();
+    });
+
+    // Function to load all posts stored in localStorage
+    function loadPosts() {
+        const forums = ['course-forum', 'general-forum', 'qa-forum'];
+        forums.forEach(forum => {
+            const forumDiv = document.getElementById(forum);
+            const posts = JSON.parse(localStorage.getItem(forum)) || [];
+            posts.forEach(post => {
+                const postDiv = document.createElement('div');
+                postDiv.classList.add('forum-post');
+                postDiv.innerHTML = `
+                    <div class="forum-title">${post.title}</div>
+                    <div class="forum-content">${post.content}</div>
+                    <div class="forum-reply-btn" onclick="replyToPost(this, '${forum}')">Reply</div>
+                    <div class="forum-delete-btn" onclick="deletePost(this, '${forum}')">Delete</div>
+                `;
+                forumDiv.appendChild(postDiv);
+            });
+        });
+    }
+
+    // Function to post to the course-related discussion forum
+    function postToCourseForum() {
+        const content = document.getElementById('course-post-content').value;
+        if (content.trim() === '') return alert('Please enter a message!');
+        
+        const post = { title: 'Course Discussion', content: content };
+        savePost('course-forum', post);
+        displayPost('course-forum', post);
+        document.getElementById('course-post-content').value = ''; // Clear input
+    }
+
+    // Function to post to the general department forum
+    function postToGeneralForum() {
+        const content = document.getElementById('general-post-content').value;
+        if (content.trim() === '') return alert('Please enter a message!');
+        
+        const post = { title: 'General Discussion', content: content };
+        savePost('general-forum', post);
+        displayPost('general-forum', post);
+        document.getElementById('general-post-content').value = ''; // Clear input
+    }
+
+    // Function to ask a question in the Q&A section
+    function askQuestion() {
+        const question = document.getElementById('qa-question').value;
+        if (question.trim() === '') return alert('Please enter a question!');
+        
+        const post = { title: 'Question', content: question };
+        savePost('qa-forum', post);
+        displayPost('qa-forum', post);
+        document.getElementById('qa-question').value = ''; // Clear input
+
+        // Simulate staff response after a delay
+        setTimeout(() => {
+            const staffPost = { title: 'Staff Answer', content: 'Here’s the response to your question.' };
+            savePost('qa-forum', staffPost);
+            displayPost('qa-forum', staffPost);
+        }, 3000); // Simulated staff reply after 3 seconds
+    }
+
+    // Function to save a post to localStorage
+    function savePost(forum, post) {
+        const posts = JSON.parse(localStorage.getItem(forum)) || [];
+        posts.push(post);
+        localStorage.setItem(forum, JSON.stringify(posts));
+    }
+
+    // Function to display a post in the respective forum section
+    function displayPost(forum, post) {
+        const forumDiv = document.getElementById(forum);
+        const postDiv = document.createElement('div');
+        postDiv.classList.add('forum-post');
+        postDiv.innerHTML = `
+            <div class="forum-title">${post.title}</div>
+            <div class="forum-content">${post.content}</div>
+            <div class="forum-reply-btn" onclick="replyToPost(this, '${forum}')">Reply</div>
+            <div class="forum-delete-btn" onclick="deletePost(this, '${forum}')">Delete</div>
+        `;
+        forumDiv.appendChild(postDiv);
+    }
+
+    // Function to reply to a post
+    function replyToPost(replyButton, forum) {
+        const reply = prompt("Enter your reply:");
+        if (reply) {
+            const replyPost = { title: 'Reply', content: reply };
+            savePost(forum, replyPost);
+            displayPost(forum, replyPost);
+        }
+    }
+
+    // Function to delete a post
+    function deletePost(deleteButton, forum) {
+        const postDiv = deleteButton.closest('.forum-post');
+        if (confirm("Are you sure you want to delete this post?")) {
+            const postContent = postDiv.querySelector('.forum-content').textContent;
+            deleteStoredPost(forum, postContent);
+            postDiv.remove();
+        }
+    }
+
+    // Function to delete a post from localStorage
+    function deleteStoredPost(forum, postContent) {
+        let posts = JSON.parse(localStorage.getItem(forum)) || [];
+        posts = posts.filter(post => post.content !== postContent);
+        localStorage.setItem(forum, JSON.stringify(posts));
+    }
+</script>
+
+
+</script>
+<section id="map">
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.5700422275304!2d76.7691085736383!3d10.995790455112035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba86104b8f60b01%3A0x75c28a0ddc379a9d!2sCoimbatore%20Institute%20of%20Engineering%20and%20Technology!5e0!3m2!1sen!2sin!4v1733491760741!5m2!1sen!2sin"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+</section>
+    
+
+<footer class="bg-darkblue text-white py-5">
+    <div class="container">
+        <div class="row">
+            <!-- Footer Column 1: Contact Info -->
+            <div class="col-md-3 mb-4">
+                <h3 class="text-warning">Coimbatore Institute of Engineering and Technology</h3>
+                <ul class="list-unstyled">
+                    <li>Narasipuram (P.O), Thondamuthur(Via),</li>
+                    <li>Vellimalaipattinam,</li>
+                    <li>Coimbatore: 641109, Tamil Nadu.</li>
+                    <li>+91 422-2970703</li>
+                    <li>info@cietcbe.edu.in</li>
+                </ul>
+            </div>
+
+            <!-- Footer Column 2: Main Links -->
+            <div class="col-md-2 mb-4">
+                <h3 class="text-warning">Main Links</h3>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="footer-link">About Us</a></li>
+                    <li><a href="#" class="footer-link">Statutory Bodies</a></li>
+                    <li><a href="#" class="footer-link">Non-Statutory Bodies</a></li>
+                    <li><a href="#" class="footer-link">Office of the CoE</a></li>
+                    <li><a href="#" class="footer-link">IQAC</a></li>
+                </ul>
+            </div>
+
+            <!-- Footer Column 3: Approvals -->
+            <div class="col-md-2 mb-4">
+                <h3 class="text-warning">Approvals</h3>
+                <ul class="list-unstyled">
+                    <li>AICTE</li>
+                    <li>Anna University</li>
+                    <li>UGC</li>
+                    <li>NAAC</li>
+                    <li>NIRF</li>
+                </ul>
+            </div>
+
+            <!-- Footer Column 4: Information Links -->
+            <div class="col-md-2 mb-4">
+                <h3 class="text-warning">Information</h3>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="footer-link">Mandatory Disclosure</a></li>
+                    <li><a href="#" class="footer-link">Committees</a></li>
+                    <li><a href="#" class="footer-link">Downloads</a></li>
+                    <li><a href="#" class="footer-link">IIC</a></li>
+                    <li><a href="#" class="footer-link">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Footer Column 5: Newsletter Subscription -->
+            <div class="col-md-3 mb-4">
+                <h3 class="text-warning">Newsletter</h3>
+                <p>You can trust us. We only send promotional offers.</p>
+                <div class="input-group">
+                    <input type="email" class="form-control" placeholder="Your email address" aria-label="Your email address">
+                    <button class="btn btn-warning subscribe-btn">Subscribe</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll to Top Button -->
+        <button id="scrollToTopBtn" class="btn btn-warning" title="Go to top">↑</button>
+
+        <!-- Social Media Links -->
+        <div class="text-center mt-4">
+            <a href="#" class="social-icon text-white me-3"><i class="fab fa-facebook fa-lg"></i></a>
+            <a href="#" class="social-icon text-white me-3"><i class="fab fa-instagram fa-lg"></i></a>
+            <a href="#" class="social-icon text-white me-3"><i class="fab fa-linkedin-in fa-lg"></i></a>
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-center mt-4">
+            <p class="text-white">&copy; 2022 All Rights Reserved | This template is made by <a href="#" class="text-warning" target="_blank">IT</a></p>
+        </div>
+        
+    </div>
+</footer>
+
+<!-- Scroll to Top Script -->
+<script>
+    // Get the button
+    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            scrollToTopBtn.style.display = "block";
+        } else {
+            scrollToTopBtn.style.display = "none";
+        }
+    };
+
+    // When the user clicks on the button, scroll to the top of the document
+    scrollToTopBtn.addEventListener("click", function() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+</script>
+
+<!-- Font Awesome for social media icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
+
+

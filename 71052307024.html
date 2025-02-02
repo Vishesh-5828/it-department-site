@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <script>
+        // Function to save assignment and attendance to localStorage
+        function saveTracker() {
+            const assignmentValue = document.getElementById('assignment-input').value;
+            const attendanceValue = document.getElementById('attendance-input').value;
+
+            localStorage.setItem('daily-assignment', assignmentValue);
+            localStorage.setItem('attendance-percentage', attendanceValue);
+
+            alert('Assignment and Attendance saved!');
+        }
+
+        // Load stored assignment and attendance values when the page is loaded
+        function loadTracker() {
+            const storedAssignment = localStorage.getItem('daily-assignment');
+            const storedAttendance = localStorage.getItem('attendance-percentage');
+
+            if (storedAssignment) {
+                document.getElementById('assignment-input').value = storedAssignment;
+            }
+
+            if (storedAttendance) {
+                document.getElementById('attendance-input').value = storedAttendance;
+            }
+        }
+
+        // Load saved data on page load
+        window.onload = loadTracker;
+    </script>
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #cfd9df, #e2ebf0);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .profile-sidebar {
+            background-color: #011b8e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 12px;
+        }
+
+        .profile-sidebar img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid white;
+            margin-bottom: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .profile-sidebar img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .profile-sidebar h2 {
+            font-size: 1.9rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .profile-sidebar p {
+            font-size: 1rem;
+        }
+
+        .profile-menu ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .profile-menu li {
+            margin: 15px 0;
+        }
+
+        .profile-menu a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 12px 15px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.2);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .profile-menu a:hover {
+            background-color: #64b5f6;
+            transform: scale(1.05);
+        }
+
+        .profile-content {
+            background-color: #fafafa;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-content h1 {
+            font-size: 2rem;
+            color: #000e8e;
+            margin-bottom: 15px;
+        }
+
+        .section-content {
+            margin-bottom: 20px;
+        }
+
+        .skills-list span {
+            display: inline-block;
+            background: #1e88e5;
+            color: #fff;
+            padding: 6px 18px;
+            margin: 6px;
+            border-radius: 25px;
+            font-size: 1rem;
+        }
+
+        .project-list li {
+            margin: 10px 0;
+            padding: 15px;
+            background: #e3f2fd;
+            border-radius: 8px;
+            border-left: 5px solid #1e88e5;
+        }
+
+        @media (max-width: 768px) {
+            .profile-sidebar {
+                width: 100%;
+                text-align: center;
+            }
+
+            .profile-container {
+                flex-direction: column;
+            }
+
+            .profile-content {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container py-5">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-4 mb-4 mb-md-0 profile-sidebar">
+                <img src="" alt="Student Photo" class="img-fluid">
+                <h2>S. Mohammedsahin</h2>
+                <p>Student</p>
+                <nav class="profile-menu">
+                    <ul>
+                        <li><a href="http://123.255.250.114/CMSAPP/dist/account/signin">📋 CMS Login</a></li>
+                        <li><a href="http://123.255.250.114/CMSapp/fees/studentfees/feesonlinepayment/">💡 Online Payment</a></li>
+                        <li><a href="http://123.255.250.114/CMSApp/coe/result/viewexamresults">📂 Result</a></li>
+                    </ul>
+                    <section>
+                        <h4>Hostel Details</h4>
+                        <ul>
+                            <li><strong>Hostel:</strong> A</li>
+                            <li><strong>Room:</strong> 133</li>
+                            <li><strong>Contact:</strong> none</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h4>Student Contact Details</h4>
+                        <ul>
+                            <li><strong>Phone:</strong> 6482442275</li>
+                            <li><strong>Email:</strong> mohammedsahin668@gmail.com</li>
+                            <li><strong>College Email:</strong> Mohammedsahin.s.ciet.@gmail.com</li>
+                        </ul>
+                    </section>
+                </nav>
+            </div>
+
+            <!-- Content -->
+            <div class="col-md-8 profile-content">
+                <section>
+                    <h1>📋 Profile Details</h1>
+                    <div class="section-content">
+                        <p><strong>Register Number:</strong> 71052307024</p>
+                        <p><strong>AADHAAR Number:</strong> 4661 3764 4844</p>
+                        <label><strong>Assignment:</strong>
+                            <input type="number" id="assignment-input" class="form-control" placeholder="Enter assignment value">
+                        </label><br>
+                        <label><strong>Attendance Percentage:</strong>
+                            <input type="number" id="attendance-input" class="form-control" min="0" max="100" placeholder="Enter attendance percentage">
+                        </label>
+                        <button class="btn btn-success mt-3" id="save-tracker" onclick="saveTracker()">Save</button>
+                    </div>
+                </section>
+
+                <section id="skills">
+                    <h1>💡 Skills</h1>
+                    <div class="section-content skills-list">
+                        <span>Web development</span>
+
+
+                    </div>
+                </section>
+
+                <section id="projects">
+                    <h1>📂 Projects</h1>
+                    <div class="section-content">
+                        <ul class="project-list">
+                            <li>Industrial wastage water purification</li>
+                            <li>online grocery shopping </li>
+
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="internship">
+                    <h1>🛠 Internship</h1>
+                    <div class="section-content">
+                        <ul>
+                            <li><strong>Company:</strong> none</li>
+                            <li><strong>Duration:</strong> none</li>
+                            <li><strong>Role:</strong> none</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="certificates">
+                    <h1>📜 Certificates</h1>
+                    <div class="section-content">
+                        <ul>
+                            <li>Introduction to Artificial Intelligence - INFOSYS</li>
+                            <li>Introduction to Deep Learning - INFOSYS</li>
+                            <li>Artificial Intelligence Foundation Certification - INFOSYS</li>
+                            <li>Introduction to Natural Language Processing - INFOSYS</li>
+                        </ul>
+                        <p>View the full certificate list in the <a href="https://docs.google.com/spreadsheets/d/1Q5ohuR6gI6Nu8ChKsh8mxL0V_NdWHCCCOV0CC12B3m0/edit?pli=1&gid=0" target="_blank">Google Sheets</a></p>
+                    </div>
+                </section>
+
+                <section id="extracurricular">
+                    <h1>🎭 Extra-Curricular Activities</h1>
+                    <div class="section-content">
+                        <ul>
+                            <li><strong>Activity:</strong> </li>
+                            <li><strong>Activity:</strong> </li>
+                            <li><strong>Activity:</strong> </li>
+                        </ul>
+                        <p>View full list of activities in the <a href="https://docs.google.com/spreadsheets/d/1Q5ohuR6gI6Nu8ChKsh8mxL0V_NdWHCCCOV0CC12B3m0/edit?pli=1&gid=0" target="_blank">Google Sheets</a></p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

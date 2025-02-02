@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJ+G6vR2/TTyl4PC6M8kHcClDaB3vbh5StjGzNnG4UHR78gD/SdeT1zJS8cf" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@boxicons/icons@2.1.1/dist/boxicons.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('image/banner-04.jpg'); /* Add your background image path here */
+            background-size: cover;
+            background-position: center;
+            height: 100vh; /* Ensure the background covers the full height of the page */
+        }
+        .wrapper {
+            justify-content: center;
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 60px;
+            background-color: rgba(255, 255, 255, 0.9); /* Slight transparency for readability */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        marquee {
+            font-size: 20px;
+            color: #022b57;
+        }
+        .pass {
+            position: relative;
+            margin-bottom: 15px;
+        }
+        .pass input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .pass i {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 20px;
+            color: #ccc;
+        }
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <nav>
+            <marquee>INFORMATION TECHNOLOGY STUDENT LOGIN</marquee>
+        </nav>
+    </div>
+   
+    <div class="wrapper">
+        <form id="loginForm">
+            <h1 class="text-center">Student</h1>
+            <h2 class="text-center">Login</h2>
+            <div class="pass">
+                <input type="text" placeholder="Register Number" id="username" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="pass">
+                <input type="password" placeholder="Password" id="password" required>
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+            <button type="button" class="btn" onclick="studentLogin()">Login</button>
+        </form>
+    </div>
+    <script>
+        function studentLogin() {
+            var rollNumber = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+        
+            // Assuming the password is always correct for now. You can add validation if needed.
+            if (rollNumber && password) {
+                // Check if the roll number is valid and within the range 71052307001 to 71052307058
+                var validRollNumber = parseInt(rollNumber);
+                if (validRollNumber >= 71052307001 && validRollNumber <= 71052307058) {
+                    // Construct the profile page URL with the folder name 'student_profile'
+                    var profilePage = "profile/" + validRollNumber + ".html"; // Example: student_profile/71052307001.html
+                    
+                    // Redirect to the student's profile page
+                    window.location.href = profilePage;
+                } else {
+                    alert("Invalid roll number. Please enter a valid roll number between 71052307001 and 71052307058.");
+                }
+            } else {
+                alert("Please enter both roll number and password.");
+            }
+        }
+        </script>
+        
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0hTg0PH1+Vb6T2VuolHtL2wr8D5gR4t61jhe8LPW39oCkUtT" crossorigin="anonymous"></script>
+</body>
+</html>

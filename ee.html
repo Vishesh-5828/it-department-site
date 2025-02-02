@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job and Internship Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+         body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            padding-top: 60px;
+        }
+        
+        .navbar {
+            background-color: #343a40;
+        }
+
+        .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .nav-link {
+            font-size: 1.1rem;
+            color: #ddd;
+        }
+
+        .nav-link:hover {
+            color: #f39c12;
+        }
+
+        .section-title {
+            text-align: center;
+            margin: 50px 0;
+            font-size: 2.5rem;
+            color: #343a40;
+            font-weight: bold;
+        }
+
+        .card {
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .apply-btn {
+            background-color: #0505b9;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .apply-btn:hover {
+            background-color: #057ff1;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .form-control {
+            font-size: 1rem;
+            border-radius: 5px;
+        }
+
+        .upload-btn {
+            background-color: #1b03b6;
+            color: #ffffff;
+            padding: 12px 20px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .upload-btn:hover {
+            background-color: #076eff;
+        }
+
+        .submission-summary {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+
+        .delete-btn {
+            background-color: #950000;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .delete-btn:hover {
+            background-color: #de0505;
+        }
+
+        .resource-card {
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            background-color: #fff;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .btn-link {
+            color: #f39c12;
+        }
+
+        .btn-link:hover {
+            color: #e67e22;
+        }
+
+        /* Scroll to Top Button */
+        #scrollToTopBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #f39c12;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            padding: 15px;
+            font-size: 18px;
+            display: none;
+            cursor: pointer;
+        }
+
+        #scrollToTopBtn:hover {
+            background-color: #e67e22;
+        }
+    </style>
+</head>
+
+<body>
+ <!-- Navigation Bar -->
+ <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">Job Portal</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#jobListings">Job Listings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#resumeUpload">Resume Upload</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#careerResources">Career Resources</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Job Listings Section -->
+<section id="jobListings">
+    <div class="container">
+        <h2 class="section-title">Job and Internship Listings</h2>
+        <div class="row">
+            <!-- Job Card 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-code me-2 text-primary"></i>Full Stack Development</h5>
+                        <p class="card-text"><i class="fas fa-clock me-2 text-secondary"></i>6-month course</p>
+                        <p class="card-text"><i class="fas fa-money-bill-wave me-2 text-success"></i>3-10 LPA salary</p>
+                        <a class="btn btn-primary apply-btn" target="_blank" href="https://trainings.internshala.com/full-stack-web-development-placement-guarantee-course/?tracking_source=PGC_homepage_trainings_cards">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Job Card 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-pencil-ruler me-2 text-primary"></i>UI/UX Design</h5>
+                        <p class="card-text"><i class="fas fa-clock me-2 text-secondary"></i>5-month course</p>
+                        <p class="card-text"><i class="fas fa-money-bill-wave me-2 text-success"></i>35,000 total stipend</p>
+                        <a class="btn btn-primary apply-btn" target="_blank" href="https://trainings.internshala.com/ui-ux-placement-guarantee-course/?tracking_source=PGC_homepage_trainings_cards">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Job Card 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-bullhorn me-2 text-primary"></i>Digital Marketing</h5>
+                        <p class="card-text"><i class="fas fa-clock me-2 text-secondary"></i>5-month course</p>
+                        <p class="card-text"><i class="fas fa-money-bill-wave me-2 text-success"></i>3-10 LPA salary</p>
+                        <a class="btn btn-primary apply-btn" target="_blank" href="https://trainings.internshala.com/digital-marketing-placement-guarantee-course/?tracking_source=PGC_homepage_trainings_cards">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Resume Upload Section -->
+<section id="resumeUpload">
+    <div class="container">
+        <h2 class="section-title">Upload Your Resume</h2>
+        <form id="resumeForm">
+            <div class="row">
+                <div class="col-md-6 form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="resume">Upload Resume</label>
+                <input type="file" class="form-control" id="resume" required>
+            </div>
+            <button type="submit" class="upload-btn">Submit Resume</button>
+        </form>
+        
+        <!-- Submission Summary -->
+        <div id="submissionSummary" class="submission-summary d-none">
+            <h4>Submission Summary</h4>
+            <p><strong>Name:</strong> <span id="summaryName"></span></p>
+            <p><strong>Email:</strong> <span id="summaryEmail"></span></p>
+            <p><strong>Resume:</strong> <span id="summaryResume"></span></p>
+            <a id="resumeLink" class="btn btn-primary d-none" href="" download>Download Resume</a>
+            <!-- Delete Button -->
+            <button id="deleteBtn" class="delete-btn">Delete Submission</button>
+        </div>
+    </div>
+</section>
+
+<!-- Career Resources Section -->
+<section id="careerResources">
+    <div class="container py-5">
+        <h2 class="section-title text-center mb-4">Career Development Resources</h2>
+        <div class="row">
+            <!-- Resource Card 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card resource-card shadow-sm h-100">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary"><i class="fas fa-file-alt me-2"></i>Resume Building Guide</h5>
+                        <p class="card-text">Learn how to craft a professional resume to impress employers.</p>
+                        <a href="https://resume.io/build-resume?ga_utm_source=bing&utm_medium=ppc&utm_campaign=434120185&utm_adgroup=resume-creator&utm_custom=Resume.io|IN|PS|NB&utm_content=77928097607921&utm_term=resume%20creation&matchtype=e&device=c&location=143956&msclkid=7bbbf061f8e01f63d52a97ee2c75f704" 
+                           class="btn btn-primary" target="_blank">Read Guide</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Resource Card 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card resource-card shadow-sm h-100">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary"><i class="fas fa-comments me-2"></i>Interview Tips</h5>
+                        <p class="card-text">Master interview techniques to ace your job interviews.</p>
+                        <a href="https://www.indeed.com/career-advice/interviewing/successful-interview" 
+                           class="btn btn-primary" target="_blank">Read Guide</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Resource Card 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card resource-card shadow-sm h-100">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary"><i class="fas fa-users me-2"></i>Soft Skills Workshops</h5>
+                        <p class="card-text">Enhance your communication and leadership skills with our workshops.</p>
+                        <a href="https://www.tcsion.com/courses/interview-and-job-prep/introduction-to-soft-skills/" 
+                           class="btn btn-primary" target="_blank">Join Workshop</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Scroll to Top Button -->
+<button id="scrollToTopBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+
+
+    <section id="map">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.5700422275304!2d76.7691085736383!3d10.995790455112035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba86104b8f60b01%3A0x75c28a0ddc379a9d!2sCoimbatore%20Institute%20of%20Engineering%20and%20Technology!5e0!3m2!1sen!2sin!4v1733491760741!5m2!1sen!2sin"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    
+    </section>
+        
+    
+    <footer class="bg-darkblue text-white py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Footer Column 1: Contact Info -->
+                <div class="col-md-3 mb-4">
+                    <h3 class="text-warning">Coimbatore Institute of Engineering and Technology</h3>
+                    <ul class="list-unstyled">
+                        <li>Narasipuram (P.O), Thondamuthur(Via),</li>
+                        <li>Vellimalaipattinam,</li>
+                        <li>Coimbatore: 641109, Tamil Nadu.</li>
+                        <li>+91 422-2970703</li>
+                        <li>info@cietcbe.edu.in</li>
+                    </ul>
+                </div>
+    
+                <!-- Footer Column 2: Main Links -->
+                <div class="col-md-2 mb-4">
+                    <h3 class="text-warning">Main Links</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="footer-link">About Us</a></li>
+                        <li><a href="#" class="footer-link">Statutory Bodies</a></li>
+                        <li><a href="#" class="footer-link">Non-Statutory Bodies</a></li>
+                        <li><a href="#" class="footer-link">Office of the CoE</a></li>
+                        <li><a href="#" class="footer-link">IQAC</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Footer Column 3: Approvals -->
+                <div class="col-md-2 mb-4">
+                    <h3 class="text-warning">Approvals</h3>
+                    <ul class="list-unstyled">
+                        <li>AICTE</li>
+                        <li>Anna University</li>
+                        <li>UGC</li>
+                        <li>NAAC</li>
+                        <li>NIRF</li>
+                    </ul>
+                </div>
+    
+                <!-- Footer Column 4: Information Links -->
+                <div class="col-md-2 mb-4">
+                    <h3 class="text-warning">Information</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="footer-link">Mandatory Disclosure</a></li>
+                        <li><a href="#" class="footer-link">Committees</a></li>
+                        <li><a href="#" class="footer-link">Downloads</a></li>
+                        <li><a href="#" class="footer-link">IIC</a></li>
+                        <li><a href="#" class="footer-link">Contact Us</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Footer Column 5: Newsletter Subscription -->
+                <div class="col-md-3 mb-4">
+                    <h3 class="text-warning">Newsletter</h3>
+                    <p>You can trust us. We only send promotional offers.</p>
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="Your email address" aria-label="Your email address">
+                        <button class="btn btn-warning subscribe-btn">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Scroll to Top Button -->
+            <button id="scrollToTopBtn" class="btn btn-warning" title="Go to top">↑</button>
+    
+            <!-- Social Media Links -->
+            <div class="text-center mt-4">
+                <a href="#" class="social-icon text-white me-3"><i class="fab fa-facebook fa-lg"></i></a>
+                <a href="#" class="social-icon text-white me-3"><i class="fab fa-instagram fa-lg"></i></a>
+                <a href="#" class="social-icon text-white me-3"><i class="fab fa-linkedin-in fa-lg"></i></a>
+            </div>
+    
+            <!-- Copyright -->
+            <div class="text-center mt-4">
+                <p class="text-white">&copy; 2022 All Rights Reserved | This template is made by <a href="#" class="text-warning" target="_blank">IT</a></p>
+            </div>
+            
+        </div>
+    </footer>
+    
+    <!-- Scroll to Top Script -->
+    <script>
+        // Get the button
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+    
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        };
+    
+        // When the user clicks on the button, scroll to the top of the document
+        scrollToTopBtn.addEventListener("click", function() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    </script>
+    
+    <!-- Font Awesome for social media icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    
+        <!-- Bootstrap JS Bundle -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Custom JS -->
+        <script src="script.js"></script>
+   
+    
+    
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Check if form data is already saved in localStorage
+        window.onload = function () {
+            // Get data from localStorage and display if exists
+            if (localStorage.getItem("name") && localStorage.getItem("email") && localStorage.getItem("resume")) {
+                document.getElementById("summaryName").textContent = localStorage.getItem("name");
+                document.getElementById("summaryEmail").textContent = localStorage.getItem("email");
+                document.getElementById("summaryResume").textContent = localStorage.getItem("resume");
+    
+                // Show the resume download link if available
+                var resumeData = localStorage.getItem("resumeData");
+                if (resumeData) {
+                    document.getElementById("resumeLink").setAttribute("href", resumeData);
+                    document.getElementById("resumeLink").classList.remove("d-none");
+                }
+    
+                document.getElementById("submissionSummary").classList.remove("d-none");
+            }
+        };
+    
+        // Convert file to base64 and store it
+        function convertToBase64(file, callback) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                callback(e.target.result);
+            };
+            reader.readAsDataURL(file);
+        }
+    
+        // Form submit event
+        document.getElementById("resumeForm").addEventListener("submit", function (e) {
+            e.preventDefault(); // Prevent form submission
+    
+            // Get form data
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var resumeFile = document.getElementById("resume").files[0];
+            var resumeName = resumeFile ? resumeFile.name : "No file uploaded";
+    
+            // Convert the resume file to base64 string
+            convertToBase64(resumeFile, function(base64String) {
+                // Save the form data to localStorage
+                localStorage.setItem("name", name);
+                localStorage.setItem("email", email);
+                localStorage.setItem("resume", resumeName);
+                localStorage.setItem("resumeData", base64String);
+    
+                // Display the submission summary
+                document.getElementById("summaryName").textContent = name;
+                document.getElementById("summaryEmail").textContent = email;
+                document.getElementById("summaryResume").textContent = resumeName;
+    
+                // Update the resume download link with base64 data
+                document.getElementById("resumeLink").setAttribute("href", base64String);
+                document.getElementById("resumeLink").classList.remove("d-none");
+    
+                // Show the summary
+                document.getElementById("submissionSummary").classList.remove("d-none");
+            });
+        });
+    
+        // Delete submission and clear localStorage
+        document.getElementById("deleteBtn").addEventListener("click", function () {
+            localStorage.removeItem("name");
+            localStorage.removeItem("email");
+            localStorage.removeItem("resume");
+            localStorage.removeItem("resumeData");
+    
+            // Hide the submission summary and the resume download link
+            document.getElementById("submissionSummary").classList.add("d-none");
+            document.getElementById("resumeLink").classList.add("d-none");
+        });
+    </script>
+    
+</body>
+
+</html>

@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Department</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<style>
+      #contact {
+            padding: 8vw;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .c {
+            background-image: linear-gradient(rgba(9, 5, 54, 0.3), rgba(5, 4, 46, 0.7)), url("image/clgpic.jpeg");
+            width: 100%;
+            height: 60vh;
+            background-size: cover;
+            background-position: center center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding-top: 40px;
+        }
+        .kk{
+            color: #ffffff;
+        }
+        /* General Section Styling */
+#get-in-touch {
+    padding: 80px 20px;
+    background-color: #f8f9fa; /* Light gray background */
+    color: #333; /* Dark text for contrast */
+    font-family: 'Arial', sans-serif;
+}
+
+/* Headings Styling */
+#get-in-touch h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: #003366;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+#get-in-touch p {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 50px;
+}
+
+/* Contact Details */
+.contact-info h5 {
+    color: #003366;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.contact-info i {
+    font-size: 1.5rem;
+    color: #007bff;
+    margin-right: 10px;
+}
+
+/* Social Links */
+.social-links a {
+    font-size: 1.5rem;
+    color: #007bff;
+    margin: 0 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.social-links a:hover {
+    color: #0056b3;
+}
+
+/* Form Styling */
+.contact-form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h4 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #003366;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #555;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.contact-form button {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #get-in-touch h2 {
+        font-size: 2rem;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+
+    .social-links a {
+        font-size: 1.2rem;
+    }
+}
+
+</style>
+</head>
+<body>
+    <header class="header">
+        <div class="container py-2">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                    <!-- Logo -->
+                    <img class="logo animated fadeIn" src="https://cietcbe.edu.in/images/logo.png" alt="CIET Logo" />
+                    
+                    <!-- Department Title and Subtitle in center -->
+                    <div class="text-center mx-auto animated fadeInUp">
+                        <!-- Department Title -->
+                        <h1 class="title mb-1 text-dark">Information Technology</h1>
+                        <p class="subtitle mb-0 text-primary">"Accredited With 'A' Grade By NAAC" (Autonomous)</p>
+                    </div>
+                    
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Navbar -->
+ <nav class="navbar navbar-expand-lg navbar-dark zebra">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">IT Department</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html" id="home-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html" id="login-link">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html" id="about-link">About</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="student_library.html" id="resources-link">Student Resources</a> <!-- Changed ID -->
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Menu
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item lion" href="http://123.255.250.114/CMSapp/fees/studentfees/feesonlinepayment/">Online Payment</a></li>
+              <li><a class="dropdown-item tiger" href="http://123.255.250.114/CMSAPP/dist/account/signin?returnurl=%2Fcmsapp%2F">CMS Login</a></li>
+              <li><a class="dropdown-item elephant" href="dd.html">Department Forum</a></li>
+              <li><a class="dropdown-item giraffe" href="http://123.255.250.114/CMSApp/coe/result/viewexamresults">Result</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+    <section class="c">
+        <h2 class="kk">
+            Contact Us/
+            </h>
+    </section>
+
+    <!-- Contact Section with Bootstrap -->
+<section id="contact" class="py-5 bg-light">
+    <div class="container">
+      <div class="row justify-content-center">
+        <!-- Contact Details -->
+        <div class="col-lg-5 mb-4">
+          <div class="card shadow border-0">
+            <div class="card-body">
+              <h2 class="text-primary text-center mb-4">Get in Touch</h2>
+              <p class="text-muted text-center">Looking for help? Fill the form and start a new adventure.</p>
+              <hr>
+  
+              <h4 class="mt-4">Headquarters</h4>
+              <p class="text-muted">
+                <i class="fas fa-map-marker-alt me-2 text-primary"></i>
+                Coimbatore Institute of Engineering and Technology, Vellimalai Pattinam, Narasipuram, Tamil Nadu 641109
+              </p>
+  
+              <h4>Phone</h4>
+              <p class="text-muted">
+                <i class="fas fa-phone-alt me-2 text-primary"></i>
+                (+91) 09790038605 <br> (+91) 422-2970703
+              </p>
+  
+              <h4>Support</h4>
+              <p class="text-muted">
+                <i class="fas fa-envelope me-2 text-primary"></i>
+                info@cietcbe.edu.in
+              </p>
+  
+              <h4>Follow Us</h4>
+              <div class="d-flex gap-3 mt-3">
+                <a href="https://www.facebook.com/cietinfo?mibextid=ZbWKwL" target="_blank" class="text-primary fs-4">
+                  <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/cietinfo?igsh=MXhvbG5mdzE2eGZtaA==" target="_blank" class="text-primary fs-4">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/school/coimbatore-institute-of-engineering-and-technology-official-page/" target="_blank" class="text-primary fs-4">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://youtube.com/@ciet_coimbatore?si=0thSEz28-SICRo8E" target="_blank" class="text-primary fs-4">
+                  <i class="fab fa-youtube"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Contact Form -->
+        <div class="col-lg-6">
+          <div class="card shadow border-0">
+            <div class="card-body">
+              <h4 class="text-primary text-center mb-4">Let's Connect</h4>
+              <p class="text-muted text-center mb-4">We would love to hear from you. Please fill out the form below.</p>
+  
+              <form id="contact-form">
+                <div class="mb-3">
+                  <label for="user_name" class="form-label">Your Name</label>
+                  <input type="text" id="user_name" class="form-control" placeholder="Enter your name" required>
+                </div>
+  
+                <div class="mb-3">
+                  <label for="user_email" class="form-label">Your Email</label>
+                  <input type="email" id="user_email" class="form-control" placeholder="Enter your email" required>
+                </div>
+  
+                <div class="mb-3">
+                  <label for="subject" class="form-label">Subject</label>
+                  <input type="text" id="subject" class="form-control" placeholder="Subject line..." required>
+                </div>
+  
+                <div class="mb-3">
+                  <label for="message" class="form-label">Your Message</label>
+                  <textarea id="message" class="form-control" rows="5" placeholder="How can we help?" required></textarea>
+                </div>
+  
+                <button type="submit" id="send-message" class="btn btn-primary w-100">Send Message</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- JavaScript for Sending Email -->
+  <script>
+   
+
+    document.getElementById("contact-form").addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent form from submitting the default way
+    
+    // Get form data
+    const name = document.getElementById("user_name").value;
+    const email = document.getElementById("user_email").value;
+    const subject = document.getElementById("subject").value;
+    const message = document.getElementById("message").value;
+
+    // Simple validation to check if all fields are filled
+    if (name && email && subject && message) {
+        // Simulate sending the message (in a real scenario, you'd send this to a server)
+        setTimeout(function() {
+            // Show success message
+            alert("Thank you, " + name + "! Your message has been sent successfully.");
+            // Reset form fields
+            document.getElementById("contact-form").reset();
+        }, 1000); // Simulate network delay
+    } else {
+        // Show error message if any field is missing
+        alert("Please fill in all fields.");
+    }
+});
+  </script>
+  
+
+<section id="map">
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.5700422275304!2d76.7691085736383!3d10.995790455112035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba86104b8f60b01%3A0x75c28a0ddc379a9d!2sCoimbatore%20Institute%20of%20Engineering%20and%20Technology!5e0!3m2!1sen!2sin!4v1733491760741!5m2!1sen!2sin"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+</section>
+<footer class="bg-darkblue text-white py-5">
+    <div class="container">
+        <div class="row">
+            <!-- Footer Column 1: Contact Info -->
+            <div class="col-md-3 mb-4">
+                <h3 class="text-warning">Coimbatore Institute of Engineering and Technology</h3>
+                <ul class="list-unstyled">
+                    <li>Narasipuram (P.O), Thondamuthur(Via),</li>
+                    <li>Vellimalaipattinam,</li>
+                    <li>Coimbatore: 641109, Tamil Nadu.</li>
+                    <li>+91 422-2970703</li>
+                    <li>info@cietcbe.edu.in</li>
+                </ul>
+            </div>
+
+            <!-- Footer Column 2: Main Links -->
+            <div class="col-md-2 mb-4">
+                <h3 class="text-warning">Main Links</h3>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="footer-link">About Us</a></li>
+                    <li><a href="#" class="footer-link">Statutory Bodies</a></li>
+                    <li><a href="#" class="footer-link">Non-Statutory Bodies</a></li>
+                    <li><a href="#" class="footer-link">Office of the CoE</a></li>
+                    <li><a href="#" class="footer-link">IQAC</a></li>
+                </ul>
+            </div>
+
+            <!-- Footer Column 3: Approvals -->
+            <div class="col-md-2 mb-4">
+                <h3 class="text-warning">Approvals</h3>
+                <ul class="list-unstyled">
+                    <li>AICTE</li>
+                    <li>Anna University</li>
+                    <li>UGC</li>
+                    <li>NAAC</li>
+                    <li>NIRF</li>
+                </ul>
+            </div>
+
+            <!-- Footer Column 4: Information Links -->
+            <div class="col-md-2 mb-4">
+                <h3 class="text-warning">Information</h3>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="footer-link">Mandatory Disclosure</a></li>
+                    <li><a href="#" class="footer-link">Committees</a></li>
+                    <li><a href="#" class="footer-link">Downloads</a></li>
+                    <li><a href="#" class="footer-link">IIC</a></li>
+                    <li><a href="#" class="footer-link">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Footer Column 5: Newsletter Subscription -->
+            <div class="col-md-3 mb-4">
+                <h3 class="text-warning">Newsletter</h3>
+                <p>You can trust us. We only send promotional offers.</p>
+                <div class="input-group">
+                    <input type="email" class="form-control" placeholder="Your email address" aria-label="Your email address">
+                    <button class="btn btn-warning subscribe-btn">Subscribe</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll to Top Button -->
+        <button id="scrollToTopBtn" class="btn btn-warning" title="Go to top">↑</button>
+
+        <!-- Social Media Links -->
+        <div class="text-center mt-4">
+            <a href="#" class="social-icon text-white me-3"><i class="fab fa-facebook fa-lg"></i></a>
+            <a href="#" class="social-icon text-white me-3"><i class="fab fa-instagram fa-lg"></i></a>
+            <a href="#" class="social-icon text-white me-3"><i class="fab fa-linkedin-in fa-lg"></i></a>
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-center mt-4">
+            <p class="text-white">&copy; 2022 All Rights Reserved | This template is made by <a href="#" class="text-warning" target="_blank">IT</a></p>
+        </div>
+        
+    </div>
+</footer>
+
+<!-- Scroll to Top Script -->
+<script>
+    // Get the button
+    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            scrollToTopBtn.style.display = "block";
+        } else {
+            scrollToTopBtn.style.display = "none";
+        }
+    };
+
+    // When the user clicks on the button, scroll to the top of the document
+    scrollToTopBtn.addEventListener("click", function() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+</script>
+
+<!-- Font Awesome for social media icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
